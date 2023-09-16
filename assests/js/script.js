@@ -52,11 +52,11 @@ function countdown() {
 // Question one
 function callQuestionOne() {
     questionOne.textContent = ("Question 1")
-    questionOneQues.textContent = ("The question");
-    questionOneAnswerABut.textContent = ("Answer A");
-    questionOneAnswerBBut.textContent = ("Answer A");
-    questionOneAnswerCBut.textContent = ("Answer A");
-    questionOneAnswerDBut.textContent = ("Answer A");
+    questionOneQues.textContent = ("What is the correct function for creating items in HTML?");
+    questionOneAnswerABut.textContent = (".createElement");
+    questionOneAnswerBBut.textContent = (".getElementId");
+    questionOneAnswerCBut.textContent = ("camelCasing");
+    questionOneAnswerDBut.textContent = ("No clue bro!");
     moveOn.textContent = ("Next Question");
     console.log(questionOneAnswerA);
     console.log(questionOneAnswerB);
@@ -179,9 +179,9 @@ function callQuestionTwo() {
     questionOne.style.display = "none";
     confirmAnswer.style.display = "none";
     moveOn2.textContent = ("Next Question");
-    questionTwoQues.textContent = ("The question");
-    questionTwoAnswerABut.textContent = ("Answer A");
-    questionTwoAnswerBBut.textContent = ("Answer A");
+    questionTwoQues.textContent = ("True or False, you can get time intervals to stop before they are done counting");
+    questionTwoAnswerABut.textContent = ("True");
+    questionTwoAnswerBBut.textContent = ("False");
     questionTwo.appendChild(questionTwoQues);
     questionTwoQues.appendChild(questionTwoList);
     questionTwoList.appendChild(questionTwoAnswerA);
@@ -254,10 +254,10 @@ function callQuestionThree() {
     questionTwo.style.display = "none";
     confirmAnswer2.style.display = "none";
     moveOn3.textContent = "To the Results"
-    questionThreeQues.textContent = ("The question");
-    questionThreeAnswerABut.textContent = ("Answer A");
-    questionThreeAnswerBBut.textContent = ("Answer A");
-    questionThreeAnswerCBut.textContent = ("Answer A");
+    questionThreeQues.textContent = ("Whats the function for rounding decimals in JS?");
+    questionThreeAnswerABut.textContent = ("toFixed()");
+    questionThreeAnswerBBut.textContent = ("Math.round");
+    questionThreeAnswerCBut.textContent = ("I have no idea!");
     questionThree.appendChild(questionThreeQues);
     questionThreeQues.appendChild(questionThreeList);
     questionThreeList.appendChild(questionThreeAnswerA);
