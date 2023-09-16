@@ -336,15 +336,14 @@ function callQuestionThree() {
 }
 
 // send user to high score
+
+
 function highScore() {
     var totalScore = ((numCorrect / 3) *100);
     var roundedScore = totalScore.toFixed(2);
-    //highScore2.textContent = (roundedScore + "%");
     localStorage.setItem("User Score", roundedScore);
     location.href = "./scoreboard.html";
-
 }
-
 
 // event begins the quiz
 startButton.addEventListener("click", callQuestionOne);    
