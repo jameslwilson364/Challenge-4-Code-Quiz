@@ -341,7 +341,7 @@ function highScore() {
     var roundedScore = totalScore.toFixed(2);
     //highScore2.textContent = (roundedScore + "%");
     localStorage.setItem("User Score", roundedScore);
-    location.href = ".../scoreboard.html";
+    location.href = "./scoreboard.html";
 
 }
 
