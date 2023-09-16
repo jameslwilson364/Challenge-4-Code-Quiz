@@ -12,27 +12,27 @@
     <header><h1>Welcome to the JavaScript Quiz</h1>
     </header>
 
-    <h2>Click the start button to begin the quiz</h2>
+    <h2 id="startQuiz">Click the start button to begin the quiz</h2>
     <div><button id="start" class="btn">Start</button></div>
     
     <div id="questionFramework">  
-        <div id="question1" hidden>Question 1
-            <div> What is something</div>
+        <div id="questionOne"></div>
+           <!-- <div> What is something</div>
             <ul>
                 <li><button id=answerA>A</button> something1</li>
                 <li><button id=answerB>B</button> something2</li>
                 <li><button id=answerC>C</button> something3</li>
                 <li><button id=answerD>D</button> something4</li>
-            </ul>
+            </ul>-->
         </div>
-        <div id="question2" hidden>Question 2
+        <div id="questionTwo" hidden>Question 2
             <div> True or False</div>
             <ul>
                 <li><button id=answerA>A</button> True</li>
                 <li><button id=answerB>B</button> False</li>
             </ul>
         </div>
-        <div id="question3"hidden>Question 3
+        <div id="questionThree"hidden>Question 3
             <div> What is something else</div>
             <ul>
                 <li><button id=answerA>A</button> something1</li>
@@ -45,7 +45,8 @@
     </div>
 
     <aside>
-        <div id="timerQuestion">This is where the timer appears</div>
+        <div id="confirm"></div>
+        <div id="timerQuestion"></div>
         <div id="scoreboard">this is where the scoreboard appears</div>
     </aside>
 
