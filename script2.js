@@ -31,36 +31,43 @@ function enterInitials() {
 // The scoreboard for the users
 function scoreboardLeaders() {
     // capture the user score from local storage and combine it with the user initials
-    var userScore = localStorage.getItem("User Score");
-    var yourScore = (userInitialsCaptured + " " + userScore);
+    var userScore = localStorage.getItem("User-Score");
+    //var yourScore = (userInitialsCaptured + " " + userScore);
+    var yourScore = [userInitialsCaptured, userScore];
     console.log(userScore);
     console.log(yourScore);
     userInitials.style.display = "none";
     
     // store the user and score in a local storage string
+    var allScores = [];
     localStorage.setItem("yourScore", JSON.stringify(yourScore));
-
+    allScores.push(yourScore);
+    console.log(yourScore);
+    console.log(allScores)
+    
     // append the local storage yourScore for new values
+    allScores = JSON.parse(localStorage.getItem("yourScore"));
+    // allScores = localStorage.getItem("yourScore");
+    // var allScores2 = JSON.parse(allScores);
+    console.log(allScores);
+
+    
+    
+    //localStorage.setItem("allScores", JSON.stringify(allScores));
+    console.log(allScores);
+    console.log(allScores.length);
     
 
     // print all of the saved scores to the highScoresList
-    
-    
-    // userHighScores.appendChild(userHighScoresList);
-    // userHighScoresList.appendChild(userHighScoresListItem);
-    // userHighScoresList.append(yourScore);
-    userHighScoresList.innerHTML = "";
-    //highScoresListLength.textContent = userHighScoresList.length;
-
-    // Render a new li for each high score
-    // for (var i = 0; i < highScoresList.length; i++) {
-    //     var highScoresList = userHighScoresList[i];
-    //     var li = document.createElement("li");
-    //     li.textContent = highScoresList;
-    //     li.setAttribute("data-index", i);
-    //     highScoresList.appendChild(li);
-    // }
-
+    userHighScores.appendChild(userHighScoresList);
+    for (var i = 0; i < allScores.length; i++) {
+        var allScores = allScores[i];
+        var li = document.createElement("li");
+        li.textContent = allScores;
+        //li.setAttribute("data-index", i);
+        userHighScoresList.appendChild(li);
+    }
+  
  // make a clear button to clear the local storage
     returnRefresh.appendChild(scoreboardSpan);
     scoreboardSpan.appendChild(refreshScoreBoard);

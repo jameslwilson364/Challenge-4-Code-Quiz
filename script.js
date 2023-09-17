@@ -30,6 +30,7 @@ var moveOn = document.createElement("button");
 var moveOn2 = document.createElement("button");
 var moveOn3 = document.createElement("button");
 
+
 // the question timer
 function countdown() {
     var timeLeft = 30;

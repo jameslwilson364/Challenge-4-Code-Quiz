@@ -1,1 +1,134 @@
 /* basic css not fancy */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: black;
+}
+
+header {
+    display: flex;
+    background-color: rgb(11, 94, 11);
+    padding: 10px;
+    text-align: left;
+    z-index: 1;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    text-justify: center;
+
+}
+
+h2 {
+    display: flex;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color:black;
+    padding: 10px;
+    justify-content: center;
+
+
+}
+div {
+    display: flex;
+    flex-wrap: wrap;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color:black;
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+}
+ol {
+    display: table-column-group;
+    flex-wrap: wrap;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color:black;
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+li {
+    padding: 10px;
+    justify-content: center;
+}
+
+aside {
+    display: flex;
+    flex-wrap: wrap;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color:black;
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+}
+button {
+    
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: green;
+    color: whitesmoke;
+
+
+}
+
+#confirm {
+    padding: 20px;
+    margin: 20px;
+}
+#confirm2 {
+    padding: 20px;
+    margin: 20px;
+}
+#confirm3 {
+    padding: 20px;
+    margin: 20px;
+}
+
+#start {
+    display: flex;
+    background-color: green;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+}
+#questionframework {
+    display: flex;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color:black;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#questionone {
+    display: flex;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color:black;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    
+}
+#highScoreList {
+    display: flex;
+    flex-wrap: wrap;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color:black;
+    margin: 30px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
