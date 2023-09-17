@@ -341,7 +341,7 @@ function callQuestionThree() {
 function highScore() {
     var totalScore = ((numCorrect / 3) *100);
     var roundedScore = totalScore.toFixed(2);
-    localStorage.setItem("User Score", roundedScore);
+    localStorage.setItem("User-Score", roundedScore);
     location.href = "./scoreboard.html";
 }
 
