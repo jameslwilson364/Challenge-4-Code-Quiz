@@ -343,7 +343,7 @@ function highScore() {
     var totalScore = ((numCorrect / 3) *100);
     var roundedScore = totalScore.toFixed(0);
     localStorage.setItem("User-Score", roundedScore);
-    location.href = "/scoreboard.html";
+    location.href = "./scoreboard.html";
 }
 
 // event begins the quiz
