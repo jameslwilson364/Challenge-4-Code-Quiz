@@ -341,37 +341,10 @@ function callQuestionThree() {
 
 function highScore() {
     var totalScore = ((numCorrect / 3) *100);
-    var roundedScore = totalScore.toFixed(2);
+    var roundedScore = totalScore.toFixed(0);
     localStorage.setItem("User-Score", roundedScore);
     location.href = "./scoreboard.html";
 }
 
 // event begins the quiz
 startButton.addEventListener("click", callQuestionOne);    
-
-
-
-// needs to track the right answer
-// needs to capture the user input
-// needs a decision loop to determine if the answer if correct or incorrect
-
-
-
- 
-
-
-
-// after first question is answered display second question
-// same parameters
-// capture right/wrong
-// transition to third question
-// update score
-
-// same as second question
-// capture the final score
-// capture the user's initials for the score board
-// takes the user to the score board
-// display the results of the quiz on the highscore page
-// after completion it should take the user to the high score board page
-// high score board page needs a return to the main page
-// restart quiz

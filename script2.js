@@ -10,7 +10,7 @@ var userHighScoresList = document.createElement("ol");
 var scoreboardSpan  = document.createElement("span");
 var returnButton = document.createElement("button");
 var refreshScoreBoard = document.createElement("button");
-var highScoresListLength = 0;
+
 
 // captures user initials
 function enterInitials() {
@@ -22,6 +22,7 @@ function enterInitials() {
         
     userSubmitInitials.addEventListener("click", function () {
         userInitialsCaptured = userEntryBox.value;
+        localStorage.setItem("User-Initials", userInitialsCaptured);
         console.log(userInitialsCaptured);
         scoreboardLeaders();
     });
@@ -33,38 +34,49 @@ function scoreboardLeaders() {
     // capture the user score from local storage and combine it with the user initials
     var userScore = localStorage.getItem("User-Score");
     //var yourScore = (userInitialsCaptured + " " + userScore);
-    var yourScore = [userInitialsCaptured, userScore];
+    //var yourScore = [userInitialsCaptured, userScore];
     console.log(userScore);
-    console.log(yourScore);
+    console.log(userInitialsCaptured);
+    //console.log(yourScore);
     userInitials.style.display = "none";
     
-    // store the user and score in a local storage string
-    var allScores = [];
-    localStorage.setItem("yourScore", JSON.stringify(yourScore));
-    allScores.push(yourScore);
-    console.log(yourScore);
-    console.log(allScores)
-    
-    // append the local storage yourScore for new values
-    allScores = JSON.parse(localStorage.getItem("yourScore"));
-    // allScores = localStorage.getItem("yourScore");
-    // var allScores2 = JSON.parse(allScores);
-    console.log(allScores);
+    // treat the variables separately; first check if localStorage is empty, then append the array if not
+    if ((localStorage.getItem("Users-Scores")) === null) {
+    var userScoresStored = [];
+    console.log(userScoresStored);
+    userScoresStored.push(userScore);
+    console.log(userScoresStored);
+    console.log(userScoresStored.length);
+    localStorage.setItem("Users-Scores", JSON.stringify(userScoresStored));
 
-    
-    
-    //localStorage.setItem("allScores", JSON.stringify(allScores));
-    console.log(allScores);
-    console.log(allScores.length);
-    
+    var usersInitialsStored = [];
+    console.log(usersInitialsStored);
+    usersInitialsStored.push(userInitialsCaptured);
+    console.log(usersInitialsStored);
+    console.log(usersInitialsStored.length);
+    localStorage.setItem("Users-Initials", JSON.stringify(usersInitialsStored));
+    }  else {
+    var userScoresStored = JSON.parse(localStorage.getItem("Users-Scores"));
+    console.log(userScoresStored);
+    userScoresStored.push(userScore);
+    console.log(userScoresStored);
+    console.log(userScoresStored.length);
+    localStorage.setItem("Users-Scores", JSON.stringify(userScoresStored));
+
+    var usersInitialsStored = JSON.parse(localStorage.getItem("Users-Initials"));
+    console.log(usersInitialsStored);
+    usersInitialsStored.push(userInitialsCaptured);
+    console.log(usersInitialsStored);
+    console.log(usersInitialsStored.length);
+    localStorage.setItem("Users-Initials", JSON.stringify(usersInitialsStored));
+    }
 
     // print all of the saved scores to the highScoresList
     userHighScores.appendChild(userHighScoresList);
-    for (var i = 0; i < allScores.length; i++) {
-        var allScores = allScores[i];
+    for (var i = 0; i < usersInitialsStored.length; i++) {
+        var boardEntry = usersInitialsStored[i] + " " + userScoresStored[i];
         var li = document.createElement("li");
-        li.textContent = allScores;
-        //li.setAttribute("data-index", i);
+        li.textContent = boardEntry;
         userHighScoresList.appendChild(li);
     }
   
@@ -74,7 +86,12 @@ function scoreboardLeaders() {
     refreshScoreBoard.textContent = "Wipe the board";
 
     refreshScoreBoard.addEventListener("click", function () {
-        localStorage.setItem("yourScore", "");
+        localStorage.setItem("Users-Scores", "");
+        localStorage.setItem("Users-Initials", "");
+        localStorage.setItem("User-Score", "");
+        localStorage.setItem("User-Initials", "");
+        userHighScoresList.style.display = "none";
+        
     });
 
   // make a button that take the user back to a new quiz
@@ -87,23 +104,5 @@ function scoreboardLeaders() {
     });
 
 }
-
-
-    
-    // localStorage.setItem("User-Initials-Historic", userInitialsCaptured);
-    // localStorage.setItem("User-Score-Historic", userScore);
-    // var allScores = {
-    //     userName : userInitialsCaptured.value.trim(),
-    //     theirScore: userScore.value.trim(),
-    // };
-    // console.log(allScores);
-    //localStorage.setItem("allScores", JSON.stringify(allScores));
-
-    // var allScores = JSON.parse(localStorage.getItem("User-Initials", "User-Score"));
-    
-    //console.log(allScores);
-    //for (i=0, i<)
-    
-
-
+// call function
 enterInitials();
