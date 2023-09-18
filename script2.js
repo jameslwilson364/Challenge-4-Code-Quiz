@@ -41,7 +41,7 @@ function scoreboardLeaders() {
     userInitials.style.display = "none";
     
     // treat the variables separately; first check if localStorage is empty, then append the array if not
-    if ((localStorage.getItem("Users-Scores")) === null) {
+    if ((localStorage.getItem("Users-Scores")) === null || (localStorage.getItem("Users-Scores")) == "") {
     var userScoresStored = [];
     console.log(userScoresStored);
     userScoresStored.push(userScore);
@@ -85,13 +85,13 @@ function scoreboardLeaders() {
     scoreboardSpan.appendChild(refreshScoreBoard);
     refreshScoreBoard.textContent = "Wipe the board";
 
-    refreshScoreBoard.addEventListener("click", function () {
+    refreshScoreBoard.addEventListener("click", function (event) {
+        
         localStorage.setItem("Users-Scores", "");
         localStorage.setItem("Users-Initials", "");
         localStorage.setItem("User-Score", "");
         localStorage.setItem("User-Initials", "");
-        userHighScoresList.style.display = "none";
-        
+        userHighScoresList.replaceChildren("");
     });
 
   // make a button that take the user back to a new quiz
@@ -99,7 +99,8 @@ function scoreboardLeaders() {
     scoreboardSpan.appendChild(returnButton);
     returnButton.textContent = "Retry the Quiz";
 
-    returnButton.addEventListener("click", function () {
+    returnButton.addEventListener("click", function (event) {
+        
         location.href = "./index.html";
     });
 
