@@ -44,7 +44,7 @@ Instructions for re-creating the panda image are on the page.
 
 ## Credits
 
-Thanks to the folks at both MDN and W3. The walkthrough on math.floor, appending new values to an array, and converting arrays back into strings were particularly helpful.
+Thanks to the folks at both MDN, W3 and StackOverflow. The walkthroughs on JSON usage, localStorage and event listeners were particularly helpful.
 
 ## License
 
