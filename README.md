@@ -2,7 +2,7 @@
 
 ## Description
 
-The challenge for week 3 was to add a password generator to the existing html page.
+The challenge for week 4 was to add a password generator to the existing html page.
 
 - What was your motivation? This was challenging, the quiz itself took a bit to set up.
 - Why did you build this project? It was an interesting challenge to use JS to dynamically update html content
