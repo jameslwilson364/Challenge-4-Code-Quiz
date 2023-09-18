@@ -343,7 +343,7 @@ function highScore() {
     var totalScore = ((numCorrect / 3) *100);
     var roundedScore = totalScore.toFixed(0);
     localStorage.setItem("User-Score", roundedScore);
-    location.href = "https://jameslwilson364.github.io/Challenge-4-Code-Quiz/scoreboard.html";
+    location.href = "./scoreboard.html";
 }
 
 // event begins the quiz
